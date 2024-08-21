@@ -1,9 +1,6 @@
 {
   "name": "sample-tetris",
   "version": "0.1.0",
-  "bin": {
-    "sample-tetris": "bin/sample-tetris.js"
-  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
