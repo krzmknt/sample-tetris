@@ -135,7 +135,7 @@ class StaticSiteConstruct extends Construct {
       "OriginAccessControl",
       {
         originAccessControlConfig: {
-          name: "OriginAccessControlForSsgBucket",
+          name: "OriginAccessControlForDestinationBucket",
           originAccessControlOriginType: "s3",
           signingBehavior: "always",
           signingProtocol: "sigv4",
@@ -201,7 +201,7 @@ class StaticSiteStack extends cdk.Stack {
 }
 
 const app = new cdk.App();
-new StaticSiteStack(app, "StaticSiteStack", {
+new StaticSiteStack(app, "TetrisStaticSiteStack", {
   env: {
     account: process.env.CDK_DEFAULT_ACCOUNT,
     region: "us-east-1",
